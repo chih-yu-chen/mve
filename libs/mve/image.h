@@ -10,6 +10,7 @@
 #ifndef MVE_IMAGE_HEADER
 #define MVE_IMAGE_HEADER
 
+#include <iostream>
 #include <string>
 #include <vector>
 #include <memory>
