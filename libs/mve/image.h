@@ -229,9 +229,10 @@ Image<T>::fill_color (T const* color)
     std::cout << "Channels: " << this->c << std::endl;
     std::cout << "Image size: " << (this->end() - this->begin()) << std::endl;
 
-    for (T* ptr = this->begin(); ptr != this->end(); ptr += this->c)
+    for (T* ptr = this->begin(); ptr != this->end(); ptr += this->c) {
         std::cout << "Filling color: " << *color << std::endl;
         std::copy(color, color + this->c, ptr);
+    }
 }
 
 template <typename T>
