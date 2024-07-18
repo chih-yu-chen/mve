@@ -230,7 +230,7 @@ Image<T>::fill_color (T const* color)
     std::cout << "Image size: " << (this->end() - this->begin()) << std::endl;
 
     for (int i = 0; i < this->c; ++i) {
-        std::cout << "Color[" << i << "]: " << color[i] << std::endl;
+        std::cout << "Color[" << i << "]: " << static_cast<int>(color[i]) << std::endl;
     }
 
     for (T* ptr = this->begin(); ptr != this->end(); ptr += this->c) {
