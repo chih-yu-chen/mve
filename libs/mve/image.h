@@ -477,6 +477,7 @@ Image<T>::linear_at (float x, float y, T* px) const
     std::cout << "row1: " << row1 << ", row2: " << row2 << std::endl;
 
     /* Copy interpolated channel values to output buffer. */
+    std::cout << "Size of px: " << sizeof(px) << std::endl;
     for (int cc = 0; cc < this->c; ++cc)
     {
         px[cc] = math::interpolate<T>
