@@ -469,6 +469,13 @@ Image<T>::linear_at (float x, float y, T* px) const
     int const col1 = floor_x * this->c;
     int const col2 = floor_xp1 * this->c;
 
+    std::cout << "x: " << x << ", y: " << y << std::endl;
+    std::cout << "floor_x: " << floor_x << ", floor_y: " << floor_y << std::endl;
+    std::cout << "floor_xp1: " << floor_xp1 << ", floor_yp1: " << floor_yp1 << std::endl;
+    std::cout << "w0: " << w0 << ", w1: " << w1 << ", w2: " << w2 << ", w3: " << w3 << std::endl;
+    std::cout << "rowstride: " << rowstride << ", col1: " << col1 << ", col2: " << col2 << std::endl;
+    std::cout << "row1: " << row1 << ", row2: " << row2 << std::endl;
+
     /* Copy interpolated channel values to output buffer. */
     for (int cc = 0; cc < this->c; ++cc)
     {
